@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    return "Hello"
 
 @app.route('/predict',methods=['POST'])
 def predict():
