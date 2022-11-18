@@ -12,10 +12,10 @@ def index():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    cgpa = request.form.get('cgpa')
-    iq = request.form.get('iq')
-    profile_score = request.form.get('profile_score')
-
+    args=request.args
+    cgpa = float(args.get("cgpa"))
+    iq = int(args.get("iq"))
+    profile_score = int(args.get("profile_score"))
 
     input_query = np.array([[cgpa,iq,profile_score]])
 
