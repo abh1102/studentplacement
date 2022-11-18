@@ -10,7 +10,7 @@ app = Flask(__name__)
 def index():
     return "Hello"
 
-@app.route('/predict',methods=['GET'])
+@app.route('/predict',methods=['POST'])
 def predict():
     args=request.args
     cgpa = float(args.get("cgpa"))
